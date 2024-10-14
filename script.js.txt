@@ -1,42 +1,22 @@
 
- // script.js
+ let wolfPoints = document.getElementById('wolf-point-value');
+
+ let feedWolfButton = document.getElementById('feed-wolf-button');
+
+ let playWithWolfButton = document.getElementById('play-with-wolf-button');
 
 
 
- const wolfPoints = document.getElementById('wolf-points');
+ feedWolfButton.addEventListener('click', () => {
+
+     wolfPoints.textContent = (parseInt(wolfPoints.textContent) + 10).toString();
+
+ });
 
 
 
- function feedWolf() {
+ playWithWolfButton.addEventListener('click', () => {
 
-     fetch('/api/feed-wolf')
+     wolfPoints.textContent = (parseInt(wolfPoints.textContent) + 20).toString();
 
-         .then(response => response.json())
-
-         .then(data => {
-
-             wolfPoints.textContent = `Wolf Points: ${data.wolfPoints}`;
-
-         })
-
-         .catch(error => console.error(error));
-
- }
-
-
-
- function playWithWolf() {
-
-     fetch('/api/play-with-wolf')
-
-         .then(response => response.json())
-
-         .then(data => {
-
-             wolfPoints.textContent = `Wolf Points: ${data.wolfPoints}`;
-
-         })
-
-         .catch(error => console.error(error));
-
- }
+ });
