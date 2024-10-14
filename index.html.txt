@@ -1,0 +1,102 @@
+
+ <!DOCTYPE html>
+
+ <html lang="en">
+
+ <head>
+
+     <meta charset="UTF-8">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Wolf Game</title>
+
+     <style>
+
+         body {
+
+             font-family: Arial, sans-serif;
+
+             text-align: center;
+
+         }
+
+
+
+         #game-container {
+
+             width: 80%;
+
+             margin: 40px auto;
+
+             padding: 20px;
+
+             border: 1px solid #ccc;
+
+             border-radius: 10px;
+
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+         }
+
+
+
+         #game-container h1 {
+
+             margin-bottom: 20px;
+
+         }
+
+
+
+         #game-container button {
+
+             padding: 10px 20px;
+
+             border: none;
+
+             border-radius: 5px;
+
+             background-color: #4CAF50;
+
+             color: #fff;
+
+             cursor: pointer;
+
+         }
+
+
+
+         #game-container button:hover {
+
+             background-color: #3e8e41;
+
+         }
+
+     </style>
+
+ </head>
+
+ <body>
+
+     <div id="game-container">
+
+         <h1>Wolf Game</h1>
+
+         <p>Choose an option:</p>
+
+         <button onclick="feedWolf()">Feed Wolf</button>
+
+         <button onclick="playWithWolf()">Play with Wolf</button>
+
+         <p id="wolf-points">Wolf Points: 0</p>
+
+     </div>
+
+
+
+     <script src="script.js"></script>
+
+ </body>
+
+ </html>

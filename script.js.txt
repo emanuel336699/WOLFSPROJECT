@@ -1,0 +1,42 @@
+
+ // script.js
+
+
+
+ const wolfPoints = document.getElementById('wolf-points');
+
+
+
+ function feedWolf() {
+
+     fetch('/api/feed-wolf')
+
+         .then(response => response.json())
+
+         .then(data => {
+
+             wolfPoints.textContent = `Wolf Points: ${data.wolfPoints}`;
+
+         })
+
+         .catch(error => console.error(error));
+
+ }
+
+
+
+ function playWithWolf() {
+
+     fetch('/api/play-with-wolf')
+
+         .then(response => response.json())
+
+         .then(data => {
+
+             wolfPoints.textContent = `Wolf Points: ${data.wolfPoints}`;
+
+         })
+
+         .catch(error => console.error(error));
+
+ }
